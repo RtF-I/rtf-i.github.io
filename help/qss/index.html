@@ -1,0 +1,119 @@
+<html>
+<head>
+<title>The QSS</title>
+<meta charset='utf-8'>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/styles.css">
+<link rel="stylesheet" media="(max-width: 767px)" href="/css/max-767.css">
+<link rel="stylesheet" media="(min-width: 768px)" href="/css/min-768.css">
+</head>
+<body>
+<header>
+	<a href="#main-menu"
+	   class="menu-toggle"
+	   role="button"
+	   id="main-menu-toggle"
+	   aria-expanded="false"
+	   aria-controls="main-menu"
+	   aria-label="Open main menu">
+	   <span></span>
+	   <span></span>
+	   <span></span>
+	   <span class="sr-only">Open main menu</span>
+	</a>
+	<h1 class="site-logo">morphic</h1>
+	<nav class="navbar" id="main-menu" role="navigation">
+		<ul>
+			
+				<li><a href="/about" title="About Morphic">About</a></li>
+			
+				<li><a href="/help/qss/" title="Morphic help and documentation">Help and Documentation</a></li>
+			
+		</ul>
+	</nav>
+</header>
+
+
+<div class="container">
+<aside class="left-sidebar">
+	<h2 class="sr-only">Navigation</h2>
+	
+		<ul class="toc">
+		
+			<li><a href="#language">1. Language</a></li>
+		
+			<li><a href="#app-text-zoom">2. App / Text Zoom</a></li>
+		
+			<li><a href="#screen-zoom">3. Screen Zoom</a></li>
+		
+			<li><a href="#youtube-captions">4. YouTube Captions</a></li>
+		
+			<li><a href="#contrast">5. High / Low Contrast</a></li>
+		
+			<li><a href="#read-aloud">6. Read Aloud</a></li>
+		
+		</ul>
+	
+</aside>
+<div class="main" id="main">
+<h2 id="language">1. Language</h2>
+
+Here is the information about the language
+
+<h2 id="app-text-zoom">2. App / Text Zoom</h2>
+
+Here is the information about the text zoom
+
+<h2 id="screen-zoom">3. Screen Zoom</h2>
+
+Information about the screen zoom
+
+<h2 id="youtube-captions">4. YouTube Captions</h2>
+
+How to enable/disable YouTube captions
+
+<h2 id="contrast">5. High / Low Contrast</h2>
+
+How to change the contrast settings
+
+<h2 id="read-aloud">6. Read Aloud</h2>
+
+How to read aloud.
+
+
+</div>
+</div><!-- container -->
+
+
+<footer>
+Morphic 2018
+</footer>
+
+<script>
+	document.addEventListener('DOMContentLoaded', function(event) {
+		var toggleButton = document.getElementById('main-menu-toggle');
+		toggleButton.addEventListener('click', toggleClicked);
+	});
+	function toggleClicked(event) {
+		console.log('Someone clicked the button');
+
+		var navMenu = document.getElementById('main-menu'),
+			toggleButton = document.getElementById('main-menu-toggle');
+
+		var status = toggleButton.getAttribute('aria-expanded');
+		if (status == "false") {
+			toggleButton.setAttribute('aria-expanded', 'true');
+			navMenu.style.display = 'block';
+
+		} else if (status == "true") {
+			toggleButton.setAttribute('aria-expanded', 'false');
+			navMenu.style.display = 'none';
+		}
+	}
+</script>
+
+</body>
+</html>

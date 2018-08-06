@@ -1,0 +1,73 @@
+<html>
+<head>
+<title>Welcome to Morphic</title>
+<meta charset='utf-8'>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/styles.css">
+<link rel="stylesheet" media="(max-width: 767px)" href="/css/max-767.css">
+<link rel="stylesheet" media="(min-width: 768px)" href="/css/min-768.css">
+</head>
+<body>
+<header>
+	<a href="#main-menu"
+	   class="menu-toggle"
+	   role="button"
+	   id="main-menu-toggle"
+	   aria-expanded="false"
+	   aria-controls="main-menu"
+	   aria-label="Open main menu">
+	   <span></span>
+	   <span></span>
+	   <span></span>
+	   <span class="sr-only">Open main menu</span>
+	</a>
+	<h1 class="site-logo">morphic</h1>
+	<nav class="navbar" id="main-menu" role="navigation">
+		<ul>
+			
+				<li><a href="/about" title="About Morphic">About</a></li>
+			
+				<li><a href="/help/qss/" title="Morphic help and documentation">Help and Documentation</a></li>
+			
+		</ul>
+	</nav>
+</header>
+
+
+	<p>This is the main page, if there is other title, I do not have idea how to handle it.</p>
+
+<p>[object Object]</p>
+
+
+<footer>
+Morphic 2018
+</footer>
+
+<script>
+	document.addEventListener('DOMContentLoaded', function(event) {
+		var toggleButton = document.getElementById('main-menu-toggle');
+		toggleButton.addEventListener('click', toggleClicked);
+	});
+	function toggleClicked(event) {
+		console.log('Someone clicked the button');
+
+		var navMenu = document.getElementById('main-menu'),
+			toggleButton = document.getElementById('main-menu-toggle');
+
+		var status = toggleButton.getAttribute('aria-expanded');
+		if (status == "false") {
+			toggleButton.setAttribute('aria-expanded', 'true');
+			navMenu.style.display = 'block';
+
+		} else if (status == "true") {
+			toggleButton.setAttribute('aria-expanded', 'false');
+			navMenu.style.display = 'none';
+		}
+	}
+</script>
+
+</body>
+</html>
