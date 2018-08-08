@@ -53,18 +53,18 @@
 	
 		<h1>Help and Documentation</h1>
 	
-	<p>all documentation</p>
-
+	<p>{{ description }}</p>
+{% for name, collection in collections %}
 <div class="kb-group">
-	<h2>The QuickSetStrip</h2>
-	<p>All information about the QuickSet Strip</p>
+	<h2>{{ collection.metadata.name }}</h2>
+	<p>{{ collection.metadata.description }}</p>
 	<ul>
-	
-		<li><a href="/help/qss/index.html">The QuickSetStrip</a></li>
-	
+	{% for item in collection %}
+		<li><a href="/{{ item.path }}">{{ item.title }}</a></li>
+	{% endfor %}
 	</ul>
-	
 </div>
+{% endfor %}
 
 </div>
 
