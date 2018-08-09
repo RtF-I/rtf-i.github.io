@@ -33,38 +33,32 @@
 	</div>
 	<nav class="navbar" id="main-menu" role="navigation">
 		<ul>
-			<li >
-				<a href="/about" title="about">About</a>
-			</li>
+			
 			<li class="active">
 				<a href="/help/qss">Help and documentation</a>
+				
 			</li>
 		</ul>
 	</nav>
 </div>
 </header>
 
+
 <div class="container">
 
+<div class="main main-no-sidebar">
+<p>All Documentation</p>
 
-
-<div class="main main-no-sidebar" id="main">
-	
-	
-		<h1>Help and Documentation</h1>
-	
-	<p>{{ description }}</p>
-{% for name, collection in collections %}
 <div class="kb-group">
-	<h2>{{ collection.metadata.name }}</h2>
-	<p>{{ collection.metadata.description }}</p>
-	<ul>
-	{% for item in collection %}
-		<li><a href="/{{ item.path }}">{{ item.title }}</a></li>
-	{% endfor %}
-	</ul>
+  <h2>The QuickSetStrip</h2>
+  <p>All information about the QuickSet Strip</p>
+  <ul>
+  
+    <li><a href="/help/qss/index.md">The QuickSetStrip</a></li>
+  
+  </ul>
+
 </div>
-{% endfor %}
 
 </div>
 
